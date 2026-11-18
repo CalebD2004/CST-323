@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+  build:
+    commands:
+      - mvn -B clean package -DskipTests --file activity2/pom.xml
+
+artifacts:
+  files:
+    - activity2/target/*.jar
+  discard-paths: yes
